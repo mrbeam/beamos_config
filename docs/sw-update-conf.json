@@ -14,79 +14,81 @@
     },
     "restart": "environment"
   },
-  "octoprint": {
-    "type": "github_release",
-    "develop":{
-      "type": "github_commit"
-    },
-    "beta": {
-      "prerelease_channel": "mrbeam2-{tier}",
-      "prerelease": true
-    },
-    "alpha": {
-      "prerelease_channel": "mrbeam2-{tier}",
-      "prerelease": true
-    }
-  },
-  "mrbeam": {
-    "name": " MrBeam Plugin",
-    "repo": "MrBeamPlugin",
-    "restart": "octoprint",
-    "pip": "https://github.com/mrbeam/MrBeamPlugin/archive/{target_version}.zip",
-    "submodules": {
-      "mrbeam-ledstrips": {
-        "name": "MrBeam LED Strips",
-        "repo": "MrBeamLedStrips",
-        "pip": "https://github.com/mrbeam/MrBeamLedStrips/archive/{target_version}.zip",
-        "global_pip_command": true
+  "modules": {
+    "octoprint": {
+      "type": "github_release",
+      "develop": {
+        "type": "github_commit"
       },
-      "iobeam": {
-        "name": "iobeam",
-        "type": "bitbucket_commit",
-        "repo": "iobeam",
-        "pip": "git+ssh://git@bitbucket.org/mrbeam/iobeam.git@{target_version}",
-        "global_pip_command": true,
-        "api_user": "MrBeamDev",
-        "api_password": "v2T5pFkmdgDqbFBJAqrt"
+      "beta": {
+        "prerelease_channel": "mrbeam2-{tier}",
+        "prerelease": true
       },
-      "mrb_hw_info": {
-        "name": "mrb_hw_info",
-        "type": "bitbucket_commit",
-        "repo": "mrb_hw_info",
-        "pip": "git+ssh://git@bitbucket.org/mrbeam/mrb_hw_info.git@{target_version}",
-        "global_pip_command": true,
-        "package_name": "mrb-hw-info",
-        "api_user": "MrBeamDev",
-        "api_password": "v2T5pFkmdgDqbFBJAqrt"
+      "alpha": {
+        "prerelease_channel": "mrbeam2-{tier}",
+        "prerelease": true
       }
-    }
-  },
-  "mrbeamdoc": {
-    "name": "Mr Beam Documentation",
-    "repo": "MrBeamDoc",
-    "pip": "https://github.com/mrbeam/MrBeamDoc/archive/{target_version}.zip",
-    "restart": "octoprint"
-  },
-  "netconnectd": {
-    "name": "OctoPrint-Netconnectd Plugin",
-    "repo": "OctoPrint-Netconnectd",
-    "pip": "https://github.com/mrbeam/OctoPrint-Netconnectd/archive/{target_version}.zip",
-    "restart": "octoprint",
-    "submodules": {
-      "netconnectd-daemon": {
-        "name": "Netconnectd Daemon",
-        "repo": "netconnectd_mrbeam",
-        "pip": "https://github.com/mrbeam/netconnectd_mrbeam/archive/{target_version}.zip",
-        "global_pip_command": true,
-        "package_name": "netconnectd",
-        "branch": "mrbeam2-stable"
+    },
+    "mrbeam": {
+      "name": " MrBeam Plugin",
+      "repo": "MrBeamPlugin",
+      "restart": "octoprint",
+      "pip": "https://github.com/mrbeam/MrBeamPlugin/archive/{target_version}.zip",
+      "submodules": {
+        "mrbeam-ledstrips": {
+          "name": "MrBeam LED Strips",
+          "repo": "MrBeamLedStrips",
+          "pip": "https://github.com/mrbeam/MrBeamLedStrips/archive/{target_version}.zip",
+          "global_pip_command": true
+        },
+        "iobeam": {
+          "name": "iobeam",
+          "type": "bitbucket_commit",
+          "repo": "iobeam",
+          "pip": "git+ssh://git@bitbucket.org/mrbeam/iobeam.git@{target_version}",
+          "global_pip_command": true,
+          "api_user": "MrBeamDev",
+          "api_password": "v2T5pFkmdgDqbFBJAqrt"
+        },
+        "mrb_hw_info": {
+          "name": "mrb_hw_info",
+          "type": "bitbucket_commit",
+          "repo": "mrb_hw_info",
+          "pip": "git+ssh://git@bitbucket.org/mrbeam/mrb_hw_info.git@{target_version}",
+          "global_pip_command": true,
+          "package_name": "mrb-hw-info",
+          "api_user": "MrBeamDev",
+          "api_password": "v2T5pFkmdgDqbFBJAqrt"
+        }
       }
+    },
+    "mrbeamdoc": {
+      "name": "Mr Beam Documentation",
+      "repo": "MrBeamDoc",
+      "pip": "https://github.com/mrbeam/MrBeamDoc/archive/{target_version}.zip",
+      "restart": "octoprint"
+    },
+    "netconnectd": {
+      "name": "OctoPrint-Netconnectd Plugin",
+      "repo": "OctoPrint-Netconnectd",
+      "pip": "https://github.com/mrbeam/OctoPrint-Netconnectd/archive/{target_version}.zip",
+      "restart": "octoprint",
+      "submodules": {
+        "netconnectd-daemon": {
+          "name": "Netconnectd Daemon",
+          "repo": "netconnectd_mrbeam",
+          "pip": "https://github.com/mrbeam/netconnectd_mrbeam/archive/{target_version}.zip",
+          "global_pip_command": true,
+          "package_name": "netconnectd",
+          "branch": "mrbeam2-stable"
+        }
+      }
+    },
+    "findmymrbeam": {
+      "name": "OctoPrint-FindMyMrBeam",
+      "repo": "OctoPrint-FindMyMrBeam",
+      "pip": "https://github.com/mrbeam/OctoPrint-FindMyMrBeam/archive/{target_version}.zip",
+      "restart": "octoprint"
     }
-  },
-  "findmymrbeam": {
-    "name": "OctoPrint-FindMyMrBeam",
-    "repo": "OctoPrint-FindMyMrBeam",
-    "pip": "https://github.com/mrbeam/OctoPrint-FindMyMrBeam/archive/{target_version}.zip",
-    "restart": "octoprint"
   }
 }
