@@ -34,7 +34,7 @@
       "repo": "MrBeamPlugin",
       "restart": "octoprint",
       "pip": "https://github.com/mrbeam/MrBeamPlugin/archive/{target_version}.zip",
-      "submodules": {
+      "dependencies": {
         "mrbeam-ledstrips": {
           "name": "MrBeam LED Strips",
           "repo": "MrBeamLedStrips",
@@ -73,7 +73,7 @@
       "repo": "OctoPrint-Netconnectd",
       "pip": "https://github.com/mrbeam/OctoPrint-Netconnectd/archive/{target_version}.zip",
       "restart": "octoprint",
-      "submodules": {
+      "dependencies": {
         "netconnectd-daemon": {
           "name": "Netconnectd Daemon",
           "repo": "netconnectd_mrbeam",
