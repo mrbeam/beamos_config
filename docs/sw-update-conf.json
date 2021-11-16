@@ -4,13 +4,20 @@
     "type": "github_commit",
     "user": "mrbeam",
     "stable": {
-      "branch": "mrbeam2-stable"
+      "branch": "mrbeam2-stable",
+      "branch_default": "mrbeam2-stable"
     },
     "beta": {
-      "branch": "mrbeam2-beta"
+      "branch": "mrbeam2-beta",
+      "branch_default": "mrbeam2-beta"
     },
     "develop": {
-      "branch": "develop"
+      "branch": "develop",
+      "branch_default": "develop"
+    },
+    "alpha": {
+      "branch": "mrbeam2-alpha",
+      "branch_default": "mrbeam2-alpha"
     },
     "restart": "environment"
   },
@@ -21,11 +28,11 @@
         "type": "github_commit"
       },
       "beta": {
-        "prerelease_channel": "mrbeam2-{tier}",
+        "prerelease_channel": "mrbeam2-beta",
         "prerelease": true
       },
       "alpha": {
-        "prerelease_channel": "mrbeam2-{tier}",
+        "prerelease_channel": "mrbeam2-alpha",
         "prerelease": true
       }
     },
@@ -39,7 +46,12 @@
           "name": "MrBeam LED Strips",
           "repo": "MrBeamLedStrips",
           "pip": "https://github.com/mrbeam/MrBeamLedStrips/archive/{target_version}.zip",
-          "global_pip_command": true
+          "global_pip_command": true,
+          "beamos_date": {
+            "2021-06-11": {
+              "pip_command": "sudo /usr/local/mrbeam_ledstrips/venv/bin/pip"
+            }
+          }
         },
         "iobeam": {
           "name": "iobeam",
@@ -48,7 +60,12 @@
           "pip": "git+ssh://git@bitbucket.org/mrbeam/iobeam.git@{target_version}",
           "global_pip_command": true,
           "api_user": "MrBeamDev",
-          "api_password": "v2T5pFkmdgDqbFBJAqrt"
+          "api_password": "v2T5pFkmdgDqbFBJAqrt",
+          "beamos_date": {
+            "2021-06-11": {
+              "pip_command": "sudo /usr/local/iobeam/venv/bin/pip"
+            }
+          }
         },
         "mrb_hw_info": {
           "name": "mrb_hw_info",
@@ -58,7 +75,12 @@
           "global_pip_command": true,
           "package_name": "mrb-hw-info",
           "api_user": "MrBeamDev",
-          "api_password": "v2T5pFkmdgDqbFBJAqrt"
+          "api_password": "v2T5pFkmdgDqbFBJAqrt",
+          "beamos_date": {
+            "2021-06-11": {
+              "pip_command": "sudo /usr/local/iobeam/venv/bin/pip"
+            }
+          }
         }
       }
     },
@@ -80,7 +102,13 @@
           "pip": "https://github.com/mrbeam/netconnectd_mrbeam/archive/{target_version}.zip",
           "global_pip_command": true,
           "package_name": "netconnectd",
-          "branch": "mrbeam2-stable"
+          "branch": "mrbeam2-stable",
+          "beamos_date": {
+            "2021-06-11": {
+              "pip_command": "sudo /usr/local/netconnectd/venv/bin/pip",
+              "branch": "master"
+            }
+          }
         }
       }
     },
