@@ -1,5 +1,4 @@
 {
-  "version": "1",
   "default": {
     "type": "github_commit",
     "user": "mrbeam",
@@ -81,14 +80,14 @@
               "pip_command": "sudo /usr/local/iobeam/venv/bin/pip"
             }
           }
+        },
+        "mrbeamdoc": {
+          "name": "Mr Beam Documentation",
+          "repo": "MrBeamDoc",
+          "pip": "https://github.com/mrbeam/MrBeamDoc/archive/{target_version}.zip",
+          "restart": "octoprint"
         }
       }
-    },
-    "mrbeamdoc": {
-      "name": "Mr Beam Documentation",
-      "repo": "MrBeamDoc",
-      "pip": "https://github.com/mrbeam/MrBeamDoc/archive/{target_version}.zip",
-      "restart": "octoprint"
     },
     "netconnectd": {
       "name": "OctoPrint-Netconnectd Plugin",
