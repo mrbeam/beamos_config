@@ -101,11 +101,31 @@
           "pip": "https://github.com/mrbeam/netconnectd_mrbeam/archive/{target_version}.zip",
           "global_pip_command": true,
           "package_name": "netconnectd",
-          "branch": "mrbeam2-stable",
           "beamos_date": {
+            "2018-01-12": {
+              "stable": {
+                "branch": "mrbeam2-stable",
+                "branch_default": "mrbeam2-stable"
+              },
+              "beta": {
+                "branch": "mrbeam2-stable",
+                "branch_default": "mrbeam2-stable"
+              },
+              "develop": {
+                "branch": "mrbeam2-stable",
+                "branch_default": "mrbeam2-stable"
+              },
+              "alpha": {
+                "branch": "mrbeam2-stable",
+                "branch_default": "mrbeam2-stable"
+              }
+            },
             "2021-06-11": {
               "pip_command": "sudo /usr/local/netconnectd/venv/bin/pip",
-              "branch": "master"
+              "stable": {
+                "branch": "master",
+                "branch_default": "master"
+              }
             }
           }
         }
