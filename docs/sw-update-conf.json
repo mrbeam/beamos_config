@@ -40,6 +40,9 @@
       "repo": "MrBeamPlugin",
       "restart": "octoprint",
       "pip": "https://github.com/mrbeam/MrBeamPlugin/archive/{target_version}.zip",
+      "update_folder": "/tmp/octoprint/",
+      "update_script": "{{python}} '{update_script}' --branch={{branch}} --force={{force}} '{{folder}}' {{target}}",
+      "methode": "update_script",
       "dependencies": {
         "mrbeam-ledstrips": {
           "name": "MrBeam LED Strips",
@@ -66,7 +69,7 @@
             }
           }
         },
-        "mrb_hw_info": {
+        "mrb-hw-info": {
           "name": "mrb_hw_info",
           "type": "bitbucket_commit",
           "repo": "mrb_hw_info",
