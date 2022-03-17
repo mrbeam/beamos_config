@@ -81,6 +81,7 @@
         "prerelease": true
       },
       "alpha": {
+        "type": "github_release",
         "prerelease_channel": "alpha",
         "prerelease": true
       },
@@ -121,7 +122,7 @@
         }
       }
     },
-    "netconnectd_plugin": {
+    "netconnectd": {
       "name": "OctoPrint-Netconnectd Plugin",
       "repo": "OctoPrint-Netconnectd",
       "pip": "https://github.com/mrbeam/OctoPrint-Netconnectd/archive/{target_version}.zip",
