@@ -73,11 +73,9 @@
         "update_script_relative_path": "scripts/update_script.py",
         "update_script": "{{python}} '{update_script}' --branch={{branch}} --force={{force}} '{{folder}}' {{target}}",
         "methode": "update_script",
-        "type": "github_release",
         "release_compare": "unequal"
       },
       "alpha": {
-        "type": "github_release",
         "prerelease_channel": "alpha",
         "prerelease": true,
         "update_folder": "/tmp/octoprint/mrbeamplugin",
