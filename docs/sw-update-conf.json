@@ -40,12 +40,6 @@
       "repo": "MrBeamPlugin",
       "restart": "octoprint",
       "pip": "https://github.com/mrbeam/MrBeamPlugin/archive/{target_version}.zip",
-      "update_folder": "/tmp/octoprint/mrbeamplugin",
-      "update_script_relative_path": "scripts/update_script.py",
-      "update_script": "{{python}} '{update_script}' --branch={{branch}} --force={{force}} '{{folder}}' {{target}}",
-      "methode": "update_script",
-      "type": "github_release",
-      "release_compare": "unequal",
       "stable_branch": {
         "branch": "stable",
         "name": "stable",
@@ -74,16 +68,32 @@
       ],
       "develop": {
         "type": "github_commit",
-        "branch": "alpha"
-      },
-      "beta": {
-        "prerelease_channel": "beta",
-        "prerelease": true
+        "branch": "alpha",
+        "update_folder": "/tmp/octoprint/mrbeamplugin",
+        "update_script_relative_path": "scripts/update_script.py",
+        "update_script": "{{python}} '{update_script}' --branch={{branch}} --force={{force}} '{{folder}}' {{target}}",
+        "methode": "update_script",
+        "type": "github_release",
+        "release_compare": "unequal"
       },
       "alpha": {
         "type": "github_release",
         "prerelease_channel": "alpha",
+        "prerelease": true,
+        "update_folder": "/tmp/octoprint/mrbeamplugin",
+        "update_script_relative_path": "scripts/update_script.py",
+        "update_script": "{{python}} '{update_script}' --branch={{branch}} --force={{force}} '{{folder}}' {{target}}",
+        "methode": "update_script",
+        "type": "github_release",
+        "release_compare": "unequal"
+      },
+      "beta": {
+        "type": "github_commit",
+        "prerelease_channel": "beta",
         "prerelease": true
+      },
+      "stable": {
+        "type": "github_commit"
       },
       "dependencies": {
         "mrbeam-ledstrips": {
@@ -127,10 +137,59 @@
       "repo": "OctoPrint-Netconnectd",
       "pip": "https://github.com/mrbeam/OctoPrint-Netconnectd/archive/{target_version}.zip",
       "restart": "octoprint",
-      "update_folder": "/tmp/octoprint/netconnectd",
-      "update_script_relative_path": "../octoprint_netconnectd/scripts/update_script.py",
-      "update_script": "{{python}} '{update_script}' --branch={{branch}} --force={{force}} '{{folder}}' {{target}}",
-      "methode": "update_script",
+      "type": "github_release",
+      "release_compare": "unequal",
+      "stable_branch": {
+        "branch": "stable",
+        "name": "stable",
+        "commitish": [
+          "stable"
+        ]
+      },
+      "prerelease_branches":[
+        {
+          "name": "alpha",
+          "branch": "alpha",
+          "commitish": [
+            "alpha",
+            "beta",
+            "stable"
+          ]
+        },
+        {
+          "name": "beta",
+          "branch": "beta",
+          "commitish": [
+            "beta",
+            "stable"
+          ]
+        }
+      ],
+      "develop": {
+        "type": "github_commit",
+        "branch": "alpha",
+        "update_folder": "/tmp/octoprint/netconnectd",
+        "update_script_relative_path": "../octoprint_netconnectd/scripts/update_script.py",
+        "update_script": "{{python}} '{update_script}' --branch={{branch}} --force={{force}} '{{folder}}' {{target}}",
+        "methode": "update_script"
+      },
+      "beta": {
+        "type": "github_commit",
+        "prerelease_channel": "beta",
+        "prerelease": true
+      },
+      "stable": {
+        "type": "github_commit"
+      },
+      "alpha": {
+        "type": "github_release",
+        "prerelease_channel": "alpha",
+        "prerelease": true,
+        "update_folder": "/tmp/octoprint/netconnectd",
+        "update_script_relative_path": "../octoprint_netconnectd/scripts/update_script.py",
+        "update_script": "{{python}} '{update_script}' --branch={{branch}} --force={{force}} '{{folder}}' {{target}}",
+        "methode": "update_script"
+      },
       "dependencies": {
         "netconnectd": {
           "repo": "netconnectd_mrbeam",
