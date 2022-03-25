@@ -1,7 +1,7 @@
 {
   "default": {
     "type": "github_commit",
-    "user": "mrbeam",
+    "user": "Josef-MrBeam",
     "release_compare": "unequal",
     "stable": {
       "branch": "mrbeam2-stable",
@@ -17,8 +17,8 @@
     },
     "develop": {
       "type": "github_commit",
-      "branch": "alpha",
-      "branch_default": "alpha"
+      "branch": "SW-527-mr-beam-tag-based-updates",
+      "branch_default": "SW-527-mr-beam-tag-based-updates"
     },
     "alpha": {
       "branch": "mrbeam2-alpha",
@@ -40,7 +40,7 @@
         "name": "alpha",
         "branch": "alpha",
         "commitish": [
-          "alpha",
+          "SW-527-mr-beam-tag-based-updates",
           "beta",
           "stable"
         ]
@@ -66,7 +66,7 @@
       "name": " MrBeam Plugin",
       "repo": "MrBeamPlugin",
       "restart": "environment",
-      "pip": "https://github.com/mrbeam/MrBeamPlugin/archive/{target_version}.zip",
+      "pip": "https://github.com/Josef-MrBeam/MrBeamPlugin/archive/{target_version}.zip",
       "develop": {
         "update_folder": "/tmp/octoprint/mrbeamplugin",
         "update_script_relative_path": "scripts/update_script.py",
@@ -82,7 +82,7 @@
       "dependencies": {
         "mrbeam-ledstrips": {
           "repo": "MrBeamLedStrips",
-          "pip": "https://github.com/mrbeam/MrBeamLedStrips/archive/{target_version}.zip",
+          "pip": "https://github.com/Josef-MrBeam/MrBeamLedStrips/archive/{target_version}.zip",
           "global_pip_command": true,
           "beamos_date": {
             "2021-06-11": {
@@ -112,14 +112,14 @@
         },
         "mrbeamdoc": {
           "repo": "MrBeamDoc",
-          "pip": "https://github.com/mrbeam/MrBeamDoc/archive/{target_version}.zip"
+          "pip": "https://github.com/Josef-MrBeam/MrBeamDoc/archive/{target_version}.zip"
         }
       }
     },
     "netconnectd": {
       "name": "OctoPrint-Netconnectd Plugin",
       "repo": "OctoPrint-Netconnectd",
-      "pip": "https://github.com/mrbeam/OctoPrint-Netconnectd/archive/{target_version}.zip",
+      "pip": "https://github.com/Josef-MrBeam/OctoPrint-Netconnectd/archive/{target_version}.zip",
       "restart": "environment",
       "develop": {
         "update_folder": "/tmp/octoprint/netconnectd",
@@ -136,7 +136,7 @@
       "dependencies": {
         "netconnectd": {
           "repo": "netconnectd_mrbeam",
-          "pip": "https://github.com/mrbeam/netconnectd_mrbeam/archive/{target_version}.zip",
+          "pip": "https://github.com/Josef-MrBeam/netconnectd_mrbeam/archive/{target_version}.zip",
           "global_pip_command": true,
           "beamos_date": {
             "2021-06-11": {
@@ -149,7 +149,7 @@
     "findmymrbeam": {
       "name": "OctoPrint-FindMyMrBeam",
       "repo": "OctoPrint-FindMyMrBeam",
-      "pip": "https://github.com/mrbeam/OctoPrint-FindMyMrBeam/archive/{target_version}.zip",
+      "pip": "https://github.com/Josef-MrBeam/OctoPrint-FindMyMrBeam/archive/{target_version}.zip",
       "restart": "octoprint"
     }
   }
