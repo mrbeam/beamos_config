@@ -2,45 +2,33 @@
   "default": {
     "type": "github_commit",
     "user": "mrbeam",
+    "release_compare": "unequal",
     "stable": {
       "branch": "mrbeam2-stable",
-      "branch_default": "mrbeam2-stable"
+      "branch_default": "mrbeam2-stable",
+      "type": "github_commit"
     },
     "beta": {
       "branch": "mrbeam2-beta",
-      "branch_default": "mrbeam2-beta"
+      "branch_default": "mrbeam2-beta",
+      "type": "github_commit",
+      "prerelease_channel": "beta",
+      "prerelease": true
     },
     "develop": {
-      "branch": "develop",
-      "branch_default": "develop"
+      "type": "github_commit",
+      "branch": "alpha",
+      "branch_default": "alpha"
     },
     "alpha": {
       "branch": "mrbeam2-alpha",
-      "branch_default": "mrbeam2-alpha"
+      "branch_default": "mrbeam2-alpha",
+      "prerelease_channel": "alpha",
+      "prerelease": true,
+      "type": "github_release"
     },
-    "restart": "environment"
-  },
-  "modules": {
-    "octoprint": {
-      "type": "github_release",
-      "develop": {
-        "type": "github_commit"
-      },
-      "beta": {
-        "prerelease_channel": "mrbeam2-beta",
-        "prerelease": true
-      },
-      "alpha": {
-        "prerelease_channel": "mrbeam2-alpha",
-        "prerelease": true
-      }
-    },
-    "mrbeam": {
-      "name": " MrBeam Plugin",
-      "repo": "MrBeamPlugin",
-      "restart": "octoprint",
-      "pip": "https://github.com/mrbeam/MrBeamPlugin/archive/{target_version}.zip",
-      "stable_branch": {
+    "restart": "environment",
+    "stable_branch": {
         "branch": "stable",
         "name": "stable",
         "commitish": [
@@ -65,33 +53,31 @@
             "stable"
           ]
         }
-      ],
+      ]
+  },
+  "modules": {
+    "octoprint": {
+      "type": "github_release",
       "develop": {
-        "type": "github_commit",
-        "branch": "alpha",
+        "type": "github_commit"
+      }
+    },
+    "mrbeam": {
+      "name": " MrBeam Plugin",
+      "repo": "MrBeamPlugin",
+      "restart": "octoprint",
+      "pip": "https://github.com/mrbeam/MrBeamPlugin/archive/{target_version}.zip",
+      "develop": {
         "update_folder": "/tmp/octoprint/mrbeamplugin",
         "update_script_relative_path": "scripts/update_script.py",
         "update_script": "{{python}} '{update_script}' --branch={{branch}} --force={{force}} '{{folder}}' {{target}}",
-        "methode": "update_script",
-        "release_compare": "unequal"
+        "methode": "update_script"
       },
       "alpha": {
-        "prerelease_channel": "alpha",
-        "prerelease": true,
         "update_folder": "/tmp/octoprint/mrbeamplugin",
         "update_script_relative_path": "scripts/update_script.py",
         "update_script": "{{python}} '{update_script}' --branch={{branch}} --force={{force}} '{{folder}}' {{target}}",
-        "methode": "update_script",
-        "type": "github_release",
-        "release_compare": "unequal"
-      },
-      "beta": {
-        "type": "github_commit",
-        "prerelease_channel": "beta",
-        "prerelease": true
-      },
-      "stable": {
-        "type": "github_commit"
+        "methode": "update_script"
       },
       "dependencies": {
         "mrbeam-ledstrips": {
@@ -135,54 +121,13 @@
       "repo": "OctoPrint-Netconnectd",
       "pip": "https://github.com/mrbeam/OctoPrint-Netconnectd/archive/{target_version}.zip",
       "restart": "octoprint",
-      "type": "github_release",
-      "release_compare": "unequal",
-      "stable_branch": {
-        "branch": "stable",
-        "name": "stable",
-        "commitish": [
-          "stable"
-        ]
-      },
-      "prerelease_branches":[
-        {
-          "name": "alpha",
-          "branch": "alpha",
-          "commitish": [
-            "alpha",
-            "beta",
-            "stable"
-          ]
-        },
-        {
-          "name": "beta",
-          "branch": "beta",
-          "commitish": [
-            "beta",
-            "stable"
-          ]
-        }
-      ],
       "develop": {
-        "type": "github_commit",
-        "branch": "alpha",
         "update_folder": "/tmp/octoprint/netconnectd",
         "update_script_relative_path": "../octoprint_netconnectd/scripts/update_script.py",
         "update_script": "{{python}} '{update_script}' --branch={{branch}} --force={{force}} '{{folder}}' {{target}}",
         "methode": "update_script"
       },
-      "beta": {
-        "type": "github_commit",
-        "prerelease_channel": "beta",
-        "prerelease": true
-      },
-      "stable": {
-        "type": "github_commit"
-      },
       "alpha": {
-        "type": "github_release",
-        "prerelease_channel": "alpha",
-        "prerelease": true,
         "update_folder": "/tmp/octoprint/netconnectd",
         "update_script_relative_path": "../octoprint_netconnectd/scripts/update_script.py",
         "update_script": "{{python}} '{update_script}' --branch={{branch}} --force={{force}} '{{folder}}' {{target}}",
