@@ -2,7 +2,7 @@
   "default": {
     "type": "github_commit",
     "user": "mrbeam",
-    "release_compare": "unequal",
+    "release_compare": "python_unequal",
     "stable": {
       "branch": "mrbeam2-stable",
       "branch_default": "mrbeam2-stable",
