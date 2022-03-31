@@ -3,6 +3,7 @@
     "type": "github_commit",
     "user": "mrbeam",
     "release_compare": "python_unequal",
+    "force_base": false,
     "stable": {
       "branch": "mrbeam2-stable",
       "branch_default": "mrbeam2-stable",
@@ -25,7 +26,7 @@
       "branch_default": "mrbeam2-alpha",
       "prerelease_channel": "alpha",
       "prerelease": true,
-      "type": "github_release"
+      "type": "github_release",
     },
     "restart": "environment",
     "stable_branch": {
