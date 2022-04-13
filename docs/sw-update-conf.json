@@ -98,11 +98,6 @@
                 "pip_command": "sudo /usr/local/mrbeam_ledstrips/venv/bin/pip"
               }
             }
-          },
-          "beamos_date": {
-            "2021-06-11": {
-              "pip_command": "sudo /usr/local/mrbeam_ledstrips/venv/bin/pip"
-            }
           }
         },
         "iobeam": {
@@ -115,11 +110,6 @@
                 "pip_command": "sudo /usr/local/iobeam/venv/bin/pip"
               }
             }
-          },
-          "beamos_date": {
-            "2021-06-11": {
-              "pip_command": "sudo /usr/local/iobeam/venv/bin/pip"
-            }
           }
         },
         "mrb-hw-info": {
@@ -131,11 +121,6 @@
               "0.18.0": {
                 "pip_command": "sudo /usr/local/iobeam/venv/bin/pip"
               }
-            }
-          },
-          "beamos_date": {
-            "2021-06-11": {
-              "pip_command": "sudo /usr/local/iobeam/venv/bin/pip"
             }
           }
         },
@@ -167,11 +152,6 @@
           "repo": "netconnectd_mrbeam",
           "pip": "https://github.com/mrbeam/netconnectd_mrbeam/archive/{target_version}.zip",
           "global_pip_command": true,
-          "beamos_date": {
-            "2021-06-11": {
-              "pip_command": "sudo /usr/local/netconnectd/venv/bin/pip"
-            }
-          },
           "beamos_version": {
             "__ge__": {
               "0.18.0": {
