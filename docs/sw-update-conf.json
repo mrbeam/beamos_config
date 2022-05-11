@@ -10,11 +10,11 @@
       "type": "github_commit"
     },
     "beta": {
-      "branch": "mrbeam2-beta",
-      "branch_default": "mrbeam2-beta",
-      "type": "github_commit",
+      "branch": "beta",
+      "branch_default": "beta",
       "prerelease_channel": "beta",
-      "prerelease": true
+      "prerelease": true,
+      "type": "github_release"
     },
     "develop": {
       "type": "github_commit",
@@ -22,8 +22,8 @@
       "branch_default": "alpha"
     },
     "alpha": {
-      "branch": "mrbeam2-alpha",
-      "branch_default": "mrbeam2-alpha",
+      "branch": "alpha",
+      "branch_default": "alpha",
       "prerelease_channel": "alpha",
       "prerelease": true,
       "type": "github_release"
@@ -68,7 +68,10 @@
         "branch": "alpha",
         "branch_default": "alpha",
         "type": "github_commit"
-      }
+      },
+      "pip": "https://github.com/mrbeam/OctoPrint/archive/{target_version}.zip",
+      "user": "mrbeam",
+      "prerelease": false
     },
     "mrbeam": {
       "name": " MrBeam Plugin",
@@ -82,6 +85,12 @@
         "methode": "update_script"
       },
       "alpha": {
+        "update_folder": "/tmp/octoprint/mrbeamplugin",
+        "update_script_relative_path": "scripts/update_script.py",
+        "update_script": "{{python}} '{update_script}' --branch={{branch}} --force={{force}} '{{folder}}' {{target}}",
+        "methode": "update_script"
+      },
+      "beta": {
         "update_folder": "/tmp/octoprint/mrbeamplugin",
         "update_script_relative_path": "scripts/update_script.py",
         "update_script": "{{python}} '{update_script}' --branch={{branch}} --force={{force}} '{{folder}}' {{target}}",
@@ -142,6 +151,12 @@
         "methode": "update_script"
       },
       "alpha": {
+        "update_folder": "/tmp/octoprint/netconnectd",
+        "update_script_relative_path": "../octoprint_netconnectd/scripts/update_script.py",
+        "update_script": "{{python}} '{update_script}' --branch={{branch}} --force={{force}} '{{folder}}' {{target}}",
+        "methode": "update_script"
+      },
+      "beta": {
         "update_folder": "/tmp/octoprint/netconnectd",
         "update_script_relative_path": "../octoprint_netconnectd/scripts/update_script.py",
         "update_script": "{{python}} '{update_script}' --branch={{branch}} --force={{force}} '{{folder}}' {{target}}",
